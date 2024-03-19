@@ -23,16 +23,18 @@ for(let i =0 ; i<=10 ; i++){
     }
 }*/
 // Iterate to a map
-/**const map = new Map()
+//forOf loop(for map)
+const map = new Map()
 map.set("IN", "India")
 map.set("UK", "United kingdom")
 map.set("FR", "France")
 map.set("IN", "India")
 
 console.log(map);
- for (const [key, value] of map){
-    console.log(`the key ${key} => ${value}`)
- }*/
+ for (const [key,value] of map){
+    console.log(`the key ${key}=> ${value}`)
+ }
+ // forIn loop for objects and arrays
  const myObject = {
     js : "javascript",
     java : "java",

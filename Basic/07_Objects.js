@@ -49,3 +49,7 @@ console.log(car);
 let cloneCar = Object.assign(car,{mode:"automatic"})
 console.log(cloneCar);
 //let clonecar02 = Object.assign()
+
+console.log(car.hasOwnProperty("price"));//for cheaking 
+cloneCar.mode= "customise";//for Update
+console.log(cloneCar);

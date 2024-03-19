@@ -30,3 +30,7 @@ let city =[
 city.forEach((object,index,array) => {console.log(`${object.houseNum},${index}`)})
 city.forEach((object,index,array) => {console.log(`${object.address},${index}`)})
 city.forEach((object,index,array) => {console.log(`${object.personName},${index}`)})
+
+city.forEach((city1)=>console.log(city));
+const obj =city.filter((city)=>city.personName);
+console.log(obj);

@@ -30,7 +30,7 @@ console.log(array.splice(1,2,"add",4,6,7))
 console.log(array)
 
 // data insertion - push() for rare-end insertion, unshift() for front-end insertion 
-// for Deletion - pop() for rare-end deletion, shift for front-end deletion
+// for Deletion - pop() for rare-end deletion, shift() for front-end deletion
 console.log(array.push(2,5,"ok"))
 console.log(array)
 console.log(array.unshift("front",3,4,"add"))

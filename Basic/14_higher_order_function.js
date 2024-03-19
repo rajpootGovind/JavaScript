@@ -15,3 +15,8 @@ function print(){
 }
 let result = print()
 console.log(result);
+
+// by arrow function
+let operation= (div,a,b)=>div(a,b);// implicit return
+const div=(x,y)=>x/y;
+console.log(operation(div,90,9));
