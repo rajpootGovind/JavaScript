@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM relation with script tag</title>
+</head>
+<body style="background-color: rgb(21 21 21); color: aliceblue;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // select the parent element and store in a variable
+    const parent=document.querySelector(".parent")
+    console.log(parent);//we get parent Element
+
+    //for finding that how many children have the parent
+    let collection=parent.children;
+    console.log(collection);//we get HTML Collection
+    //HTML Collection Nearly arrays like data 
+    console.log(parent.children[1]);
+    console.log(parent.children[1].innerText)
+
+    //for printing all HTML collection value
+    // we cant use forEach but we can use Classic for loop
+   for(let i=0; i<parent.children.length;i++){
+       console.log(parent.children[i].innerText)
+   }
+   parent.children[1].style.color="orange";
+
+   //HTML collection into Array and apply forEach for printing values
+   let newCollection =Array.from(collection)
+   newCollection.forEach((day)=>console.log(day.innerText));
+
+   //for printing last element of parent/last child element
+   console.log(parent.lastElementChild);
+   //same goes for first child element
+
+   //-> How to move from Child to Parent
+   let day01=parent.children[1];
+   console.log(day01.parentElement);
+   //          OR
+   const dayOne=document.querySelector(".day")
+   console.log(dayOne);
+   console.log(dayOne.parentElement);
+   //We can also track/move on siblings
+   console.log(dayOne.nextElementSibling);
+
+   // for defining How many nodes have parent
+   console.log("Nodes:",parent.childNodes);
+
+
+
+    
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body style="background-color: #212121; color:#ffffff">
+    <!-- We are doing traverse and manupulation, except  creating new node and attaching on page -->
+    <div class="container">
+        <ul>
+            <li class="list" id="one">one</li>
+            <li class="list" id="two">two</li>
+            <li class="list" id="three">three</li>
+        </ul>
+        <h2 id="hone">this is h1</h2>
+    </div>
+    <h2 id="htwo">this is h2</h2>
+    <h2 id="hthree">this is h3</h2>
+    <h2 id="hfour">this is h4</h2>
+</body>
+<script>
+    const parent=document.querySelector(".container")
+    console.log(parent);
+    const childCollection=parent.children;//from parent to child
+    console.log(childCollection);//get the HTML collection
+    
+    const headings =childCollection[1];
+    childCollection[1].innerText="My name is Govind Rajpoot"
+    console.log(headings);
+    console.log(headings.parentElement);//move/traverse from child to parent
+
+    const uList=childCollection[0]
+    console.log(uList);
+   const list =uList.children
+   console.log(list);//get html collection
+
+  let text= document.createTextNode(" sabji daal");//text node craeted
+   list[0].appendChild(text)//this text node added on that element
+   
+   list[1].innerText="cheeni";//this override the text
+   console.log(list[0].parentElement);
+
+   console.log(uList.parentElement.innerText);
+
+   const heading=document.querySelectorAll("h2")
+   console.log(heading);// we get nodeList
+   console.log(heading[0]);
+
+  console.log(parent.childNodes);
+  //console.log(body.childNodes);ReferanceError
+
+</script>
+</html>
