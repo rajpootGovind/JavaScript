@@ -1,0 +1,12 @@
+#div{
+    height:120px;
+    width:140px;
+    margin:10px;
+    background-color: aqua;
+}
+
+#btn2x{
+    font-size: 2em;
+    background-color: aquamarine;
+    color:red;
+}

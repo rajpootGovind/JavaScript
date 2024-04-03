@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit & Remove</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul>
+        <li>javasacript</li>
+    </ul>
+    
+</body>
+<script>
+    const uL=document.querySelector("ul");
+    console.log(uL);
+    const list01=document.createElement("li");
+    console.log(list01)
+    uL.appendChild(list01);
+    list01.innerText="Java";
+    console.log(uL);
+    //          or
+    //we can create a function , when we have to added a lang. in list , we call it
+    function lang(language){
+        const langName=document.createElement("li");//create list element/node
+        const newUL=document.querySelector("ul");//select parent
+        newUL.appendChild(langName)//append on parent to list element
+
+        // --> langName.innerText=language;  //-> this causes the optimization, cause of browser need to traverse whole the tree
+        
+        //so we use optimization approach-1.create text node and then 2.append on the element
+        langName.appendChild(document.createTextNode(language))
+    }
+    lang("Python");
+    lang("ruby")
+
+    //Edit   --> by replaceWith()method
+    const firstElement=document.querySelector("li:nth-child(2)")//select element
+    console.log(firstElement)
+
+    const newList=document.createElement("li");//create new element
+    console.log(newList)
+    //newList.innerText="replace" //--> optimization issue
+    const newElement=newList.appendChild(document.createTextNode("Replace language"))//append text
+   // console.log(newElement)
+    firstElement.replaceWith(newList)
+
+    //Edit-02--> by outerHTML=""
+    const secElement=document.querySelector("li:nth-child(2)");
+    secElement.outerHTML="<li>Java</li>"
+
+
+    //Remove
+    const lastElement=document.querySelector("li:nth-child(4)")
+    lastElement.remove();
+     
+
+</script>
+</html>
