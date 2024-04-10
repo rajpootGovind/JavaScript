@@ -65,7 +65,7 @@ new Promise((resolve,reject)=>{
  })
 
  //----------------------------------05-----------------------------------------
-
+//Json formatter //fetch()
  fetch("https://api.github.com/users/rajpootGovind")
  .then((data)=>{
     return data.json()
