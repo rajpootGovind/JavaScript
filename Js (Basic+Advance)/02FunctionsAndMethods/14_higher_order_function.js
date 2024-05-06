@@ -8,7 +8,7 @@ function add(num1,num2){
 let res = math(add,5,7)
 console.log(res);
 //-02- Anonymous fn as a parameter
-function print(){
+function printFn(){
     return function(){
         console.log("Function working good");
     }

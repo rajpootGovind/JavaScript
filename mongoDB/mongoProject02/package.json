@@ -1,0 +1,14 @@
+{
+  "name": "mongoproject02",
+  "version": "1.0.0",
+  "description": "we are gonna to perform Read operation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Govind Rajpoot",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.3.3"
+  }
+}
