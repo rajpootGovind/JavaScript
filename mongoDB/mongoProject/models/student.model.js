@@ -8,3 +8,5 @@ const studentsSchema = new mongoo.Schema({
 //model() used to create collection , we write in singular form it will auto converted in prural.
 //second parameter define the structure of documents/schema.
 module.exports = mongoo.model("student",studentsSchema)
+
+console.log(typeof studentsSchema);

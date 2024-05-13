@@ -1,0 +1,19 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "REST(representational state transfer)application programming inteface for data manupulation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node appDelete.js",
+    "dev": "nodemon appDelete.js"
+  },
+  "author": "Govind Rajpoot",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4",
+    "nodemon": "^3.1.0",
+    "validator": "^13.12.0"
+  }
+}
